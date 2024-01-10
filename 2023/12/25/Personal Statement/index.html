@@ -10,7 +10,7 @@
 </blockquote>
 <h2 id="Proposals"><a href="#Proposals" class="headerlink" title="Proposals"></a>Proposals</h2><h3 id="Topology-Machine-learning"><a href="#Topology-Machine-learning" class="headerlink" title="Topology &amp; Machine learning"></a>Topology &amp; Machine learning</h3><p>Neural network is always recognized as one of the most famous “black box” model. There are attempts to explain what happened in the learning process, what makes it better, what should be avoid. Most frequently used method is add some explainable layer (heat map, attention, etc.) or use clustering. But isn’t there anything more we can think about?</p>
 <div align="center">
-<img src="https://d3i71xaburhd42.cloudfront.net/de01f74a899ecc7e3228cddbc743aaf6faf5e55f/4-Figure2-1.png" width="400">
+<img src="https://d3i71xaburhd42.cloudfront.net/de01f74a899ecc7e3228cddbc743aaf6faf5e55f/4-Figure2-1.png" width="600">
 </div>
 
 <p>“Less is more!”</p>
@@ -20,19 +20,23 @@
 <img src="https://d3i71xaburhd42.cloudfront.net/46269c47b5affcd6b2dfd9d933b5691bf7d9dc84/5-Figure7-1.png" width="400">
 </div>
 
-<p>The early attempts of using topology to explain neural networks was focusing on convolutional neural networks (CNN). For instance, you many find the all kernels learned from CNN in the same layer makes a wonderful mainfold. Topological data analysis (TDA) finds its topology invariants (in terms of Betti numbers), so we will know how many variables (coordinates&#x2F;groups) we need to describe them (only 2, corresponding to 2 kinds of rotations).</p>
+<p>The early attempts of using topology to explain neural networks was focusing on convolutional neural networks (CNN). For instance, you many find the all kernels learned from CNN in the same layer makes a wonderful mainfold. <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1710.04019.pdf">Topological data analysis (TDA)</a> finds its topology invariants (in terms of Betti numbers), so we will know how many variables (coordinates&#x2F;groups) we need to describe them (only 2, corresponding to 2 kinds of rotations).</p>
 <div align="center">
-<img src="https://d3i71xaburhd42.cloudfront.net/058bded152c14e3c63b2d0cf7558908484eed1dc/2-Figure1-1.png" width="400">
+<img src="https://d3i71xaburhd42.cloudfront.net/058bded152c14e3c63b2d0cf7558908484eed1dc/2-Figure1-1.png" width="800">
 </div>
 
 <p>More interesting pioneer works shows that activation function is the key of changing topology of embedding manifold. And full connected layers fold them to prepare for next unbuckle.</p>
+<div align="center">
+<img src="https://cdn.mathpix.com/snip/images/vbMprR6CyRXhf2sNqbcMpE2gd9NNWvwiboTnSV-Tcao.original.fullsize.png" width="300">
+</div>
+
 <p>I am working on followings currently</p>
 <ul>
 <li>Build topology analysis on more different and difficult machine learning tasks and neural network structures, the more experiment we do, the more we might find.</li>
 <li>The topology of CNN is very clear now, that means I don’t need to train model from zero start. Similar to fine-tune but not exactly the same. Those kernels, by topology, gives a already-close-to-minimum position, as a result, the training will be accelerated.</li>
-<li>People who familiar with TDA might know, it will add a lots of not important topology when the open set grows, I want to develop an algorithm to cut off those meaningless ones, just leave those important.</li>
-<li>Topology means a lot, first of all, it leads to group algebra, also by representation theory, it connects to matrix and symplectic geometry, this all means we now have a wonderful tool that can connect ML method with traditional math-science methods.</li>
-<li>Topology only gives connection, that means shape, if we can find a numerical representation to tangent bundle of manifolds in data space (I am thinking orthogonal hyperplanes to TDA vectors), we have a Lie group related to current task. I am not sure what this would leads to know, but it is always sure: introduce more math tools &#x3D;&#x3D; more fun!</li>
+<li>People who familiar with <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1710.04019.pdf">TDA</a> might know, it will add a lots of not important topology when the open set grows, I want to develop an algorithm to cut off those meaningless ones, just leave those important.</li>
+<li>Topology means a lot, first of all, it leads to <a target="_blank" rel="noopener" href="https://link.springer.com/book/10.1007/978-1-4757-4034-9">group algebra</a>, also by representation theory, it connects to matrix and symplectic geometry, this all means we now have a wonderful tool that can connect ML method with traditional math-science methods.</li>
+<li>Topology only gives connection, that means shape, if we can find a numerical representation to <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Tangent_bundle">tangent bundle</a> of manifolds in data space (I am thinking orthogonal hyperplanes to TDA vectors), we have a Lie group related to current task. I am not sure what this would leads to know, but it is always sure: introduce more math tools &#x3D;&#x3D; more fun!</li>
 </ul>
 <div align="center">
 <img src="https://www.frontiersin.org/files/Articles/667963/frai-04-667963-HTML-r3/image_m/frai-04-667963-g010.jpg" width="400">
@@ -48,7 +52,8 @@
 <li>Chazal, Frédéric, and Bertrand Michel. “An Introduction to Topological Data Analysis: Fundamental and Practical Aspects for Data Scientists.” Frontiers in Artificial Intelligence 4 (September 29, 2021): 667963. <a target="_blank" rel="noopener" href="https://doi.org/10.3389/frai.2021.667963">https://doi.org/10.3389/frai.2021.667963</a>.</li>
 <li>Murugan, Jeff, and Duncan Robertson. “An Introduction to Topological Data Analysis for Physicists: From LGM to FRBs.” arXiv, April 24, 2019. <a target="_blank" rel="noopener" href="http://arxiv.org/abs/1904.11044">http://arxiv.org/abs/1904.11044</a>.</li>
 </ul>
-<h3 id="Grading-chain-of-thought-by-noise-diffusion"><a href="#Grading-chain-of-thought-by-noise-diffusion" class="headerlink" title="Grading chain of thought by noise diffusion"></a>Grading chain of thought by noise diffusion</h3><h3 id="Copy-drosophila-neural-group-to-NN"><a href="#Copy-drosophila-neural-group-to-NN" class="headerlink" title="Copy drosophila neural group to NN"></a>Copy drosophila neural group to NN</h3><p>One of the most excellent achievement from 2023 in science is that, scientists have completed the most advanced map of an insect brain to date, a landmark achievement in neuroscience that brings scientists closer to a true understanding of the mechanics of the mind.</p>
+<h3 id="Grading-chain-of-thought-by-noise-diffusion"><a href="#Grading-chain-of-thought-by-noise-diffusion" class="headerlink" title="Grading chain of thought by noise diffusion"></a>Grading chain of thought by noise diffusion</h3><p>The diffusion model is </p>
+<h3 id="Copy-drosophila-neural-group-to-NN"><a href="#Copy-drosophila-neural-group-to-NN" class="headerlink" title="Copy drosophila neural group to NN"></a>Copy drosophila neural group to NN</h3><p>One of the most excellent achievement from 2023 in science is that, scientists have completed the most advanced map of an insect brain to date, a landmark achievement in neuroscience that brings scientists closer to a true understanding of the mechanics of the mind.</p>
 <div align="center">
 <img src="https://api.hub.jhu.edu/factory/sites/default/files/styles/soft_crop_1600/public/2023-03/neuron1.jpg" width="400">
 </div>
